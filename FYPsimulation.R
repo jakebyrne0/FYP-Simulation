@@ -28,7 +28,7 @@ X_hat <- predict(first_stage)
 iv_model <- lm(Y ~ X_hat)
 summary(iv_model)
 
-cat("\nTrue coefficient for X on Y:", beta_x, "\n")
+cat("\nTrue coefficient for X on Y:", beta_xy, "\n")
 cat("Naive estimate (without instrument):", coef(naive_model)["X"], "\n")
 cat("IV estimate (with Z as instrument):", coef(iv_model)["X_hat"], "\n")
 
